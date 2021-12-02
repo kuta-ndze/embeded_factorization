@@ -1,0 +1,890 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[tikz]{standalone}
+\usetikzlibrary{topaths,calc}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\n{9}
+\newcommand\rad{8}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Define colors:
+\definecolor{red1}{HTML}{660000}
+\definecolor{red2}{HTML}{330000}
+\definecolor{red3}{HTML}{ff0000}
+\definecolor{red4}{HTML}{b30000}
+\definecolor{red5}{HTML}{ff4d4d}
+\definecolor{red6}{HTML}{ff6666}
+\definecolor{red7}{HTML}{1a0000}
+\definecolor{red8}{HTML}{ff3333}
+\definecolor{red9}{HTML}{ff8080}
+\definecolor{red10}{HTML}{e60000}
+\definecolor{red11}{HTML}{ff1a1a}
+\definecolor{red12}{HTML}{ff9999}
+\definecolor{red13}{HTML}{ffb3b3}
+\definecolor{red14}{HTML}{cc0000}
+\definecolor{red15}{HTML}{990000}
+\definecolor{red16}{HTML}{4d0000}
+\definecolor{red17}{HTML}{800000}
+\definecolor{red18}{HTML}{ffe6e6}
+
+\definecolor{orange1}{HTML}{cc7a00}
+\definecolor{orange2}{HTML}{ffd699}
+\definecolor{orange3}{HTML}{ff9900}
+\definecolor{orange4}{HTML}{ffcc80}
+\definecolor{orange5}{HTML}{ffe0b3}
+\definecolor{orange6}{HTML}{804d00}
+\definecolor{orange7}{HTML}{4d2e00}
+\definecolor{orange8}{HTML}{ffc266}
+\definecolor{orange9}{HTML}{ffb84d}
+\definecolor{orange10}{HTML}{e68a00}
+\definecolor{orange11}{HTML}{ffd699}
+\definecolor{orange12}{HTML}{b36b00}
+\definecolor{orange13}{HTML}{1a0f00}
+\definecolor{orange14}{HTML}{995c00}
+\definecolor{orange15}{HTML}{663d00}
+\definecolor{orange16}{HTML}{ffad33}
+\definecolor{orange17}{HTML}{fff5e6}
+\definecolor{orange18}{HTML}{ffebcc}
+
+\definecolor{yellow1}{HTML}{ffffe6}
+\definecolor{yellow2}{HTML}{b3b300}
+\definecolor{yellow3}{HTML}{ffffb3}
+\definecolor{yellow4}{HTML}{ffffcc}
+\definecolor{yellow5}{HTML}{ffff00}
+\definecolor{yellow6}{HTML}{ffff80}
+\definecolor{yellow7}{HTML}{e6e600}
+\definecolor{yellow8}{HTML}{808000}
+\definecolor{yellow9}{HTML}{ffff99}
+\definecolor{yellow10}{HTML}{cccc00}
+\definecolor{yellow11}{HTML}{666600}
+\definecolor{yellow12}{HTML}{ffff1a}
+\definecolor{yellow13}{HTML}{333300}
+\definecolor{yellow14}{HTML}{999900}
+\definecolor{yellow15}{HTML}{ffff33}
+\definecolor{yellow16}{HTML}{ffff4d}
+\definecolor{yellow17}{HTML}{4d4d00}
+\definecolor{yellow18}{HTML}{ffff66}
+
+\definecolor{green1}{HTML}{006600}
+\definecolor{green2}{HTML}{ccffcc}
+\definecolor{green3}{HTML}{00cc00}
+\definecolor{green4}{HTML}{66ff66}
+\definecolor{green5}{HTML}{00ff00}
+\definecolor{green6}{HTML}{00e600}
+\definecolor{green7}{HTML}{008000}
+\definecolor{green8}{HTML}{004d00}
+\definecolor{green9}{HTML}{80ff80}
+\definecolor{green10}{HTML}{1aff1a}
+\definecolor{green11}{HTML}{009900}
+\definecolor{green12}{HTML}{b3ffb3}
+\definecolor{green13}{HTML}{99ff99}
+\definecolor{green14}{HTML}{33ff33}
+\definecolor{green15}{HTML}{00b300}
+\definecolor{green16}{HTML}{003300}
+\definecolor{green17}{HTML}{4dff4d}
+\definecolor{green18}{HTML}{e6ffe6}
+
+\definecolor{blue1}{HTML}{000080}
+\definecolor{blue2}{HTML}{e6e6ff}
+\definecolor{blue3}{HTML}{0000e6}
+\definecolor{blue4}{HTML}{b3b3ff}
+\definecolor{blue5}{HTML}{00004d}
+\definecolor{blue6}{HTML}{0000ff}
+\definecolor{blue7}{HTML}{000080}
+\definecolor{blue8}{HTML}{000066}
+\definecolor{blue9}{HTML}{ccccff}
+\definecolor{blue10}{HTML}{9999ff}
+\definecolor{blue11}{HTML}{1a1aff}
+\definecolor{blue12}{HTML}{0000b3}
+\definecolor{blue13}{HTML}{3333ff}
+\definecolor{blue14}{HTML}{6666ff}
+\definecolor{blue15}{HTML}{000099}
+\definecolor{blue16}{HTML}{0000cc}
+\definecolor{blue17}{HTML}{4d4dff}
+\definecolor{blue18}{HTML}{8080ff}
+
+\definecolor{violet1}{HTML}{df80ff}
+\definecolor{violet2}{HTML}{600080}
+\definecolor{violet3}{HTML}{8600b3}
+\definecolor{violet4}{HTML}{260033}
+\definecolor{violet5}{HTML}{c61aff}
+\definecolor{violet6}{HTML}{ac00e6}
+\definecolor{violet7}{HTML}{730099}
+\definecolor{violet8}{HTML}{39004d}
+\definecolor{violet9}{HTML}{f2ccff}
+\definecolor{violet10}{HTML}{d24dff}
+\definecolor{violet11}{HTML}{d966ff}
+\definecolor{violet12}{HTML}{9900cc}
+\definecolor{violet13}{HTML}{4d0066}
+\definecolor{violet14}{HTML}{bf00ff}
+\definecolor{violet15}{HTML}{f9e6ff}
+\definecolor{violet16}{HTML}{e699ff}
+\definecolor{violet17}{HTML}{cc33ff}
+\definecolor{violet18}{HTML}{ecb3ff}
+
+\definecolor{grey1}{HTML}{f2f2f2}
+\definecolor{grey2}{HTML}{a6a6a6}
+\definecolor{grey3}{HTML}{737373}
+\definecolor{grey4}{HTML}{e6e6e6}
+\definecolor{grey5}{HTML}{666666}
+\definecolor{grey6}{HTML}{bfbfbf}
+\definecolor{grey7}{HTML}{333333}
+\definecolor{grey8}{HTML}{b3b3b3}
+\definecolor{grey9}{HTML}{808080}
+\definecolor{grey10}{HTML}{595959}
+\definecolor{grey11}{HTML}{4d4d4d}
+\definecolor{grey12}{HTML}{d9d9d9}
+\definecolor{grey13}{HTML}{1a1a1a}
+\definecolor{grey14}{HTML}{404040}
+\definecolor{grey15}{HTML}{999999}
+\definecolor{grey16}{HTML}{262626}
+\definecolor{grey17}{HTML}{8c8c8c}
+\definecolor{grey18}{HTML}{cccccc}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tikzpicture}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\coordinate (v1) at (90 - 1*360/\n + 360/\n:\rad);
+\draw[fill=black] (90 - 1*360/\n + 360/\n:\rad) circle (2pt);
+
+\coordinate (v2) at (90 - 2*360/\n + 360/\n:\rad);
+\draw[fill=black] (90 - 2*360/\n + 360/\n:\rad) circle (2pt);
+
+\coordinate (v7) at (90 - 3*360/\n + 360/\n:\rad);%v7
+\draw[fill=black] (90 - 3*360/\n + 360/\n:\rad) circle (2pt);
+
+\coordinate (v3) at (90 - 4*360/\n + 360/\n:\rad);%v3
+\draw[fill=black] (90 - 4*360/\n + 360/\n:\rad) circle (2pt);
+
+\coordinate (v4) at (90 - 5*360/\n + 360/\n:\rad);%v4
+\draw[fill=black] (90 - 5*360/\n + 360/\n:\rad) circle (2pt);
+
+\coordinate (v8) at (90 - 6*360/\n + 360/\n:\rad);%v8
+\draw[fill=black] (90 - 6*360/\n + 360/\n:\rad) circle (2pt);
+
+\coordinate (v5) at (90 - 7*360/\n + 360/\n:\rad);%v5
+\draw[fill=black] (90 - 7*360/\n + 360/\n:\rad) circle (2pt);
+
+\coordinate (v6) at (90 - 8*360/\n + 360/\n:\rad);%v6
+\draw[fill=black] (90 - 8*360/\n + 360/\n:\rad) circle (2pt);
+
+\coordinate (v9) at (90 - 9*360/\n + 360/\n:\rad);%v9
+\draw[fill=black] (90 - 9*360/\n + 360/\n:\rad) circle (2pt);
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Original part
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%1 to 2:
+\draw[thick,red1] (v1) to[out=340, in=160] (v2); %1
+\draw[thick,yellow1] (v1) to[out=344, in=156] (v2); %2
+\draw[thick,green1] (v1) to[out=348, in=152] (v2); %3
+\draw[thick,blue1] (v1) to[out=352, in=148] (v2); %4
+
+%1 to 3:
+\draw[thick,orange1] (v1) to[out=300, in=120] (v3); %1
+\draw[thick,orange2] (v1) to[out=298, in=122] (v3); %2
+\draw[thick,yellow2] (v1) to[out=302, in=118] (v3); %3
+\draw[thick,green2] (v1) to[out=296, in=124] (v3); %4
+
+%1 to 4:
+\draw[thick,red2] (v1) to[out=280, in=100] (v4); %1
+\draw[thick,orange1] (v1) to[out=279, in=101] (v4); %2
+\draw[thick,yellow1] (v1) to[out=281, in=99] (v4); %3
+\draw[thick,blue2] (v1) to[out=278, in=102] (v4); %4
+
+%1 to 5:
+\draw[thick,red1] (v1) to[out=240, in=60] (v5); %1
+\draw[thick,green1] (v1) to[out=242, in=58] (v5); %2
+\draw[thick,green2] (v1) to[out=238, in=62] (v5); %3
+\draw[thick,blue2] (v1) to[out=244, in=56] (v5); %4
+
+%1 to 6:
+\draw[thick,red2] (v1) to[out=220, in=40] (v6); %1
+\draw[thick,orange2] (v1) to[out=218, in=42] (v6); %2
+\draw[thick,yellow2] (v1) to[out=222, in=38] (v6); %3
+\draw[thick,blue1] (v1) to[out=216, in=44] (v6); %4
+
+%2 to 3:
+\draw[thick,red1] (v2) to[out=280, in=100] (v3); %1
+\draw[thick,orange1] (v2) to[out=278, in=102] (v3); %2
+\draw[thick,green3] (v2) to[out=282, in=98] (v3); %3
+\draw[thick,blue1] (v2) to[out=276, in=104] (v3); %4
+
+%2 to 4:
+\draw[thick,red2] (v2) to[out=260, in=80] (v4); %1
+\draw[thick,orange1] (v2) to[out=258, in=82] (v4); %2
+\draw[thick,green3] (v2) to[out=262, in=78] (v4); %3
+\draw[thick,blue3] (v2) to[out=256, in=84] (v4); %4
+
+%2 to 5:
+\draw[thick,orange3] (v2) to[out=220, in=40] (v5); %1
+\draw[thick,yellow1] (v2) to[out=219, in=41] (v5); %2
+\draw[thick,yellow3] (v2) to[out=221, in=39] (v5); %3
+\draw[thick,blue3] (v2) to[out=218, in=42] (v5); %4
+
+%2 to 6:
+\draw[thick,red2] (v2) to[out=200, in=20] (v6); %1
+\draw[thick,orange3] (v2) to[out=198, in=22] (v6); %2
+\draw[thick,yellow3] (v2) to[out=202, in=18] (v6); %3
+\draw[thick,green1] (v2) to[out=196, in=24] (v6); %4
+
+%3 to 4:
+\draw[thick,red3] (v3) to[out=220, in=40] (v4); %1
+\draw[thick,yellow2] (v3) to[out=224, in=36] (v4); %2
+\draw[thick,green2] (v3) to[out=228, in=32] (v4); %3
+\draw[thick,blue3] (v3) to[out=232, in=28] (v4); %4
+
+%3 to 5:
+\draw[thick,red1] (v3) to[out=180, in=0] (v5); %1
+\draw[thick,orange2] (v3) to[out=178, in=2] (v5); %2
+\draw[thick,yellow3] (v3) to[out=182, in=358] (v5); %3
+\draw[thick,blue3] (v3) to[out=176, in=4] (v5); %4
+
+%6 to 3:
+\draw[thick,red3] (v6) to[out=340, in=160] (v3); %1
+\draw[thick,yellow3] (v6) to[out=341, in=159] (v3); %2
+\draw[thick,green3] (v6) to[out=339, in=161] (v3); %3
+\draw[thick,blue1] (v6) to[out=342, in=158] (v3); %4
+%4 to 5:
+\draw[thick,red3] (v5) to[out=340, in=160] (v4); %1
+\draw[thick,orange3] (v5) to[out=342, in=158] (v4); %2
+\draw[thick,yellow1] (v5) to[out=338, in=162] (v4); %3
+\draw[thick,green2] (v5) to[out=344, in=156] (v4); %4
+
+%4 to 6:
+\draw[thick,orange3] (v6) to[out=320, in=140] (v4); %1
+\draw[thick,yellow2] (v6) to[out=318, in=142] (v4); %2
+\draw[thick,green3] (v6) to[out=316, in=144] (v4); %3
+\draw[thick,blue2] (v6) to[out=314, in=146] (v4); %4
+
+%5 to 6:
+\draw[thick,red3] (v6) to[out=280, in=100] (v5); %1
+\draw[thick,orange2] (v6) to[out=276, in=104] (v5); %2
+\draw[thick,green1] (v6) to[out=272, in=108] (v5); %3
+\draw[thick,blue2] (v6) to[out=268, in=112] (v5); %4
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%First extension
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%1 to 2:
+\draw[thick,green4] (v1) to[out=356, in=144] (v2); %5
+\draw[thick,blue4] (v1) to[out=0, in=140] (v2); %6
+\draw[thick,violet1] (v1) to[out=4, in=136] (v2); %7
+\draw[thick,violet2] (v1) to[out=8, in=132] (v2); %8
+\draw[thick,grey1] (v1) to[out=12, in=128] (v2); %9
+\draw[thick,grey2] (v1) to[out=16, in=124] (v2); %10
+
+%1 to 3:
+\draw[thick,orange5] (v1) to[out=304, in=116] (v3); %5
+\draw[thick,yellow4] (v1) to[out=294, in=126] (v3); %6
+\draw[thick,green5] (v1) to[out=306, in=114] (v3); %7
+\draw[thick,blue5] (v1) to[out=292, in=128] (v3); %8
+\draw[thick,violet1] (v1) to[out=308, in=112] (v3); %9
+\draw[thick,grey1] (v1) to[out=290, in=130] (v3); %10
+
+%1 to 4:
+\draw[thick,red6] (v1) to[out=282, in=98] (v4); %5
+\draw[thick,orange4] (v1) to[out=277, in=103] (v4); %6
+\draw[thick,yellow5] (v1) to[out=283, in=97] (v4); %7
+\draw[thick,violet2] (v1) to[out=276, in=104] (v4); %8
+\draw[thick,violet4] (v1) to[out=284, in=96] (v4); %9
+\draw[thick,grey5] (v1) to[out=275, in=105] (v4); %10
+
+%1 to 5:
+\draw[thick,red6] (v1) to[out=236, in=64] (v5); %5
+\draw[thick,orange5] (v1) to[out=246, in=54] (v5); %6
+\draw[thick,violet3] (v1) to[out=234, in=66] (v5); %7
+\draw[thick,violet5] (v1) to[out=248, in=52] (v5); %8
+\draw[thick,grey4] (v1) to[out=232, in=68] (v5); %9
+\draw[thick,grey5] (v1) to[out=250, in=50] (v5); %10
+
+%1 to 6:
+\draw[thick,red4] (v1) to[out=224, in=36] (v6); %5
+\draw[thick,red5] (v1) to[out=214, in=46] (v6); %6
+\draw[thick,yellow4] (v1) to[out=226, in=34] (v6); %7
+\draw[thick,green6] (v1) to[out=212, in=48] (v6); %8
+\draw[thick,violet5] (v1) to[out=228, in=32] (v6); %9
+\draw[thick,grey3] (v1) to[out=210, in=50] (v6); %10
+
+%2 to 3:
+\draw[thick,red7] (v2) to[out=284, in=96] (v3); %5
+\draw[thick,red8] (v2) to[out=274, in=106] (v3); %6
+\draw[thick,yellow7] (v2) to[out=286, in=94] (v3); %7
+\draw[thick,green7] (v2) to[out=272, in=108] (v3); %8
+\draw[thick,blue7] (v2) to[out=288, in=92] (v3); %9
+\draw[thick,grey6] (v2) to[out=270, in=110] (v3); %10
+
+%2 to 4:
+\draw[thick,red7] (v2) to[out=264, in=76] (v4); %5
+\draw[thick,orange7] (v2) to[out=254, in=86] (v4); %6
+\draw[thick,orange8] (v2) to[out=266, in=74] (v4); %7
+\draw[thick,green8] (v2) to[out=252, in=88] (v4); %8
+\draw[thick,blue4] (v2) to[out=268, in=72] (v4); %9
+\draw[thick,grey6] (v2) to[out=250, in=90] (v4); %10
+
+%2 to 5:
+\draw[thick,orange9] (v2) to[out=222, in=38] (v5); %5
+\draw[thick,yellow8] (v2) to[out=217, in=43] (v5); %6
+\draw[thick,yellow9] (v2) to[out=223, in=37] (v5); %7
+\draw[thick,violet3] (v2) to[out=216, in=44] (v5); %8
+\draw[thick,violet7] (v2) to[out=224, in=36] (v5); %9
+\draw[thick,grey2] (v2) to[out=215, in=45] (v5); %10
+
+%2 to 6:
+\draw[thick,red4] (v2) to[out=204, in=16] (v6); %5
+\draw[thick,orange7] (v2) to[out=194, in=26] (v6); %6
+\draw[thick,blue8] (v2) to[out=206, in=14] (v6); %7
+\draw[thick,violet6] (v2) to[out=192, in=28] (v6); %8
+\draw[thick,grey3] (v2) to[out=208, in=12] (v6); %9
+\draw[thick,grey7] (v2) to[out=190, in=30] (v6); %10
+
+%3 to 4:
+\draw[thick,orange4] (v3) to[out=236, in=24] (v4); %5
+\draw[thick,yellow10] (v3) to[out=240, in=20] (v4); %6
+\draw[thick,green5] (v3) to[out=244, in=16] (v4); %7
+\draw[thick,blue9] (v3) to[out=248, in=12] (v4); %8
+\draw[thick,violet8] (v3) to[out=252, in=8] (v4); %9
+\draw[thick,violet9] (v3) to[out=256, in=4] (v4); %10
+
+%3 to 5:
+\draw[thick,orange10] (v3) to[out=184, in=356] (v5); %5
+\draw[thick,yellow7] (v3) to[out=174, in=6] (v5); %6
+\draw[thick,green7] (v3) to[out=186, in=354] (v5); %7
+\draw[thick,violet10] (v3) to[out=172, in=8] (v5); %8
+\draw[thick,grey4] (v3) to[out=188, in=352] (v5); %9
+\draw[thick,grey9] (v3) to[out=170, in=10] (v5); %10
+
+%3 to 6:
+\draw[thick,red5] (v6) to[out=338, in=162] (v3); %5
+\draw[thick,green9] (v6) to[out=343, in=157] (v3); %6
+\draw[thick,blue7] (v6) to[out=337, in=163] (v3); %7
+\draw[thick,violet6] (v6) to[out=344, in=156] (v3); %8
+\draw[thick,violet10] (v6) to[out=336, in=164] (v3); %9
+\draw[thick,grey8] (v6) to[out=345, in=155] (v3); %10
+
+%4 to 5:
+\draw[thick,red9] (v5) to[out=336, in=164] (v4); %5
+\draw[thick,green8] (v5) to[out=346, in=154] (v4); %6
+\draw[thick,blue9] (v5) to[out=334, in=166] (v4); %7
+\draw[thick,violet7] (v5) to[out=348, in=152] (v4); %8
+\draw[thick,violet8] (v5) to[out=332, in=168] (v4); %9
+\draw[thick,grey10] (v5) to[out=350, in=150] (v4); %10
+
+%4 to 6:
+\draw[thick,yellow5] (v6) to[out=312, in=148] (v4); %5
+\draw[thick,blue10] (v6) to[out=310, in=150] (v4); %6
+\draw[thick,violet4] (v6) to[out=308, in=152] (v4); %7
+\draw[thick,violet9] (v6) to[out=306, in=154] (v4); %8
+\draw[thick,grey7] (v6) to[out=322, in=138] (v4); %9
+\draw[thick,grey8] (v6) to[out=324, in=136] (v4); %10
+
+%5 to 6:
+\draw[thick,orange9] (v6) to[out=264, in=116] (v5); %5
+\draw[thick,yellow8] (v6) to[out=260, in=120] (v5); %6
+\draw[thick,green6] (v6) to[out=256, in=124] (v5); %7
+\draw[thick,blue10] (v6) to[out=252, in=128] (v5); %8
+\draw[thick,grey9] (v6) to[out=248, in=132] (v5); %9
+\draw[thick,grey10] (v6) to[out=244, in=136] (v5); %10
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%1 to 7:
+\draw[thick,red5] (v1) to[out=320, in=140] (v7); %1
+\draw[thick,orange6] (v1) to[out=322, in=138] (v7); %2
+\draw[thick,yellow6] (v1) to[out=318, in=142] (v7); %3
+\draw[thick,green5] (v1) to[out=324, in=136] (v7); %4
+\draw[thick,blue4] (v1) to[out=316, in=144] (v7); %5
+\draw[thick,blue5] (v1) to[out=326, in=134] (v7); %6
+\draw[thick,blue6] (v1) to[out=314, in=146] (v7); %7
+\draw[thick,violet3] (v1) to[out=328, in=132] (v7); %8
+\draw[thick,violet4] (v1) to[out=312, in=148] (v7); %9
+\draw[thick,grey3] (v1) to[out=330, in=130] (v7); %10
+
+%1 to 8:
+\draw[thick,red4] (v1) to[out=260, in=80] (v8); %1
+\draw[thick,orange4] (v1) to[out=261, in=79] (v8); %2
+\draw[thick,orange6] (v1) to[out=259, in=81] (v8); %3
+\draw[thick,yellow5] (v1) to[out=262, in=78] (v8); %4
+\draw[thick,yellow6] (v1) to[out=258, in=82] (v8); %5
+\draw[thick,green4] (v1) to[out=263, in=77] (v8); %6
+\draw[thick,green6] (v1) to[out=257, in=83] (v8); %7
+\draw[thick,blue6] (v1) to[out=264, in=76] (v8); %8
+\draw[thick,grey2] (v1) to[out=256, in=84] (v8); %9
+\draw[thick,grey4] (v1) to[out=265, in=75] (v8); %10
+
+%2 to 7:
+\draw[thick,orange8] (v2) to[out=300, in=120] (v7); %1
+\draw[thick,yellow7] (v2) to[out=304, in=116] (v7); %2
+\draw[thick,yellow8] (v2) to[out=308, in=112] (v7); %3
+\draw[thick,yellow9] (v2) to[out=312, in=108] (v7); %4
+\draw[thick,green4] (v2) to[out=316, in=104] (v7); %5
+\draw[thick,green8] (v2) to[out=320, in=100] (v7); %6
+\draw[thick,violet1] (v2) to[out=324, in=96] (v7); %7
+\draw[thick,violet3] (v2) to[out=328, in=92] (v7); %8
+\draw[thick,violet6] (v2) to[out=332, in=88] (v7); %9
+\draw[thick,grey3] (v2) to[out=336, in=84] (v7); %10
+
+%2 to 8:
+\draw[thick,red4] (v2) to[out=240, in=60] (v8); %1
+\draw[thick,red8] (v2) to[out=241, in=59] (v8); %2
+\draw[thick,orange9] (v2) to[out=239, in=61] (v8); %3
+\draw[thick,green7] (v2) to[out=242, in=58] (v8); %4
+\draw[thick,blue7] (v2) to[out=238, in=62] (v8); %5
+\draw[thick,blue8] (v2) to[out=243, in=57] (v8); %6
+\draw[thick,violet2] (v2) to[out=237, in=63] (v8); %7
+\draw[thick,violet7] (v2) to[out=244, in=56] (v8); %8
+\draw[thick,grey1] (v2) to[out=236, in=64] (v8); %9
+\draw[thick,grey7] (v2) to[out=245, in=55] (v8); %10
+
+%3 to 7:
+\draw[thick,red5] (v7) to[out=260, in=80] (v3); %1
+\draw[thick,red8] (v7) to[out=264, in=76] (v3); %2
+\draw[thick,orange5] (v7) to[out=268, in=72] (v3); %3
+\draw[thick,green9] (v7) to[out=272, in=68] (v3); %4
+\draw[thick,blue9] (v7) to[out=276, in=64] (v3); %5
+\draw[thick,violet1] (v7) to[out=280, in=60] (v3); %6
+\draw[thick,violet6] (v7) to[out=284, in=56] (v3); %7
+\draw[thick,grey6] (v7) to[out=288, in=52] (v3); %8
+\draw[thick,grey8] (v7) to[out=292, in=48] (v3); %9
+\draw[thick,grey9] (v7) to[out=296, in=44] (v3); %10
+
+%3 to 8:
+\draw[thick,red7] (v3) to[out=200, in=20] (v8); %1
+\draw[thick,orange4] (v3) to[out=198, in=22] (v8); %2
+\draw[thick,orange10] (v3) to[out=202, in=18] (v8); %3
+\draw[thick,yellow4] (v3) to[out=196, in=24] (v8); %4
+\draw[thick,yellow10] (v3) to[out=204, in=16] (v8); %5
+\draw[thick,blue5] (v3) to[out=194, in=26] (v8); %6
+\draw[thick,violet8] (v3) to[out=206, in=14] (v8); %7
+\draw[thick,violet9] (v3) to[out=192, in=28] (v8); %8
+\draw[thick,grey1] (v3) to[out=208, in=12] (v8); %9
+\draw[thick,grey4] (v3) to[out=190, in=30] (v8); %10
+
+%4 to 7:
+\draw[thick,red6] (v7) to[out=240, in=60] (v4); %1
+\draw[thick,orange7] (v7) to[out=242, in=58] (v4); %2
+\draw[thick,yellow6] (v7) to[out=238, in=62] (v4); %3
+\draw[thick,yellow10] (v7) to[out=244, in=56] (v4); %4
+\draw[thick,green5] (v7) to[out=236, in=64] (v4); %5
+\draw[thick,green10] (v7) to[out=246, in=54] (v4); %6
+\draw[thick,blue4] (v7) to[out=234, in=66] (v4); %7
+\draw[thick,grey6] (v7) to[out=248, in=52] (v4); %8
+\draw[thick,grey8] (v7) to[out=232, in=68] (v4); %9
+\draw[thick,grey10] (v7) to[out=250, in=50] (v4); %10
+
+%4 to 8:
+\draw[thick,red7] (v4) to[out=180, in=360] (v8); %1
+\draw[thick,red9] (v4) to[out=184, in=356] (v8); %2
+\draw[thick,orange8] (v4) to[out=188, in=352] (v8); %3
+\draw[thick,yellow6] (v4) to[out=192, in=348] (v8); %4
+\draw[thick,green10] (v4) to[out=196, in=344] (v8); %5
+\draw[thick,blue10] (v4) to[out=200, in=340] (v8); %6
+\draw[thick,violet2] (v4) to[out=204, in=336] (v8); %7
+\draw[thick,violet7] (v4) to[out=208, in=332] (v8); %8
+\draw[thick,grey5] (v4) to[out=212, in=328] (v8); %9
+\draw[thick,grey7] (v4) to[out=216, in=324] (v8); %10
+
+%5 to 7:
+\draw[thick,red6] (v7) to[out=200, in=20] (v5); %1
+\draw[thick,red9] (v7) to[out=199, in=21] (v5); %2
+\draw[thick,red10] (v7) to[out=201, in=19] (v5); %3
+\draw[thick,orange5] (v7) to[out=198, in=22] (v5); %4
+\draw[thick,orange10] (v7) to[out=202, in=18] (v5); %5
+\draw[thick,yellow7] (v7) to[out=197, in=23] (v5); %6
+\draw[thick,green8] (v7) to[out=203, in=17] (v5); %7
+\draw[thick,blue6] (v7) to[out=196, in=24] (v5); %8
+\draw[thick,blue9] (v7) to[out=204, in=16] (v5); %9
+\draw[thick,violet5] (v7) to[out=195, in=25] (v5); %10
+
+%5 to 8:
+\draw[thick,red10] (v5) to[out=320, in=140] (v8); %1
+\draw[thick,yellow9] (v5) to[out=316, in=144] (v8); %2
+\draw[thick,green6] (v5) to[out=312, in=148] (v8); %3
+\draw[thick,green7] (v5) to[out=308, in=152] (v8); %4
+\draw[thick,blue6] (v5) to[out=304, in=156] (v8); %5
+\draw[thick,blue10] (v5) to[out=300, in=160] (v8); %6
+\draw[thick,violet8] (v5) to[out=296, in=164] (v8); %7
+\draw[thick,violet10] (v5) to[out=292, in=168] (v8); %8
+\draw[thick,grey2] (v5) to[out=288, in=172] (v8); %9
+\draw[thick,grey5] (v5) to[out=284, in=176] (v8); %10
+
+%6 to 7:
+\draw[thick,red10] (v7) to[out=180, in=0] (v6); %1
+\draw[thick,orange6] (v7) to[out=179, in=1] (v6); %2
+\draw[thick,orange7] (v7) to[out=181, in=359] (v6); %3
+\draw[thick,yellow8] (v7) to[out=178, in=2] (v6); %4
+\draw[thick,green10] (v7) to[out=182, in=358] (v6); %5
+\draw[thick,blue8] (v7) to[out=177, in=3] (v6); %6
+\draw[thick,violet4] (v7) to[out=183, in=357] (v6); %7
+\draw[thick,violet5] (v7) to[out=176, in=4] (v6); %8
+\draw[thick,grey9] (v7) to[out=184, in=356] (v6); %9
+\draw[thick,grey10] (v7) to[out=175, in=5] (v6); %10
+
+%6 to 8:
+\draw[thick,red10] (v6) to[out=300, in=120] (v8); %1
+\draw[thick,orange6] (v6) to[out=298, in=122] (v8); %2
+\draw[thick,orange9] (v6) to[out=302, in=118] (v8); %3
+\draw[thick,yellow4] (v6) to[out=296, in=124] (v8); %4
+\draw[thick,yellow5] (v6) to[out=304, in=116] (v8); %5
+\draw[thick,green9] (v6) to[out=294, in=126] (v8); %6
+\draw[thick,green10] (v6) to[out=306, in=114] (v8); %7
+\draw[thick,blue7] (v6) to[out=292, in=128] (v8); %8
+\draw[thick,violet9] (v6) to[out=308, in=112] (v8); %9
+\draw[thick,violet10] (v6) to[out=290, in=130] (v8); %10
+
+%7 to 8:
+\draw[thick,red8] (v7) to[out=220, in=40] (v8); %1
+\draw[thick,red9] (v7) to[out=218, in=42] (v8); %2
+\draw[thick,orange8] (v7) to[out=222, in=38] (v8); %3
+\draw[thick,orange10] (v7) to[out=216, in=44] (v8); %4
+\draw[thick,yellow9] (v7) to[out=224, in=36] (v8); %5
+\draw[thick,yellow10] (v7) to[out=214, in=46] (v8); %6
+\draw[thick,green4] (v7) to[out=226, in=34] (v8); %7
+\draw[thick,green9] (v7) to[out=212, in=48] (v8); %8
+\draw[thick,blue5] (v7) to[out=228, in=32] (v8); %9
+\draw[thick,blue8] (v7) to[out=210, in=50] (v8); %10
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Second extension
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%1 to 2:
+\draw[thick,yellow11] (v1) to[out=20, in=120] (v2); %11
+\draw[thick,yellow12] (v1) to[out=24, in=116] (v2); %12
+\draw[thick,grey11] (v1) to[out=28, in=112] (v2); %13
+\draw[thick,grey12] (v1) to[out=32, in=108] (v2); %14
+
+%1 to 3:
+\draw[thick,yellow13] (v1) to[out=310, in=110] (v3); %11
+\draw[thick,blue11] (v1) to[out=288, in=132] (v3); %12
+\draw[thick,blue12] (v1) to[out=312, in=108] (v3); %13
+\draw[thick,violet12] (v1) to[out=286, in=134] (v3); %14
+
+%1 to 4:
+\draw[thick,red12] (v1) to[out=285, in=95] (v4); %11
+\draw[thick,orange11] (v1) to[out=274, in=106] (v4); %12
+\draw[thick,orange12] (v1) to[out=286, in=94] (v4); %13
+\draw[thick,green11] (v1) to[out=273, in=107] (v4); %14
+
+%1 to 5:
+\draw[thick,green11] (v1) to[out=230, in=70] (v5); %11
+\draw[thick,green12] (v1) to[out=252, in=48] (v5); %12
+\draw[thick,blue11] (v1) to[out=228, in=72] (v5); %13
+\draw[thick,blue13] (v1) to[out=254, in=46] (v5); %14
+
+%1 to 6:
+\draw[thick,orange11] (v1) to[out=230, in=30] (v6); %11
+\draw[thick,orange13] (v1) to[out=208, in=52] (v6); %12
+\draw[thick,violet11] (v1) to[out=232, in=28] (v6); %13
+\draw[thick,grey13] (v1) to[out=206, in=54] (v6); %14
+
+%2 to 3:
+\draw[thick,red14] (v2) to[out=290, in=90] (v3); %11
+\draw[thick,orange14] (v2) to[out=268, in=112] (v3); %12
+\draw[thick,yellow11] (v2) to[out=292, in=88] (v3); %13
+\draw[thick,green14] (v2) to[out=266, in=114] (v3); %14
+
+%2 to 4:
+\draw[thick,yellow14] (v2) to[out=270, in=70] (v4); %11
+\draw[thick,green15] (v2) to[out=248, in=92] (v4); %12
+\draw[thick,violet15] (v2) to[out=272, in=68] (v4); %13
+\draw[thick,grey11] (v2) to[out=246, in=94] (v4); %14
+
+%2 to 5:
+\draw[thick,red15] (v2) to[out=225, in=35] (v5); %11
+\draw[thick,orange14] (v2) to[out=214, in=46] (v5); %12
+\draw[thick,yellow12] (v2) to[out=226, in=34] (v5); %13
+\draw[thick,grey14] (v2) to[out=213, in=47] (v5); %14
+
+%2 to 6:
+\draw[thick,orange15] (v2) to[out=210, in=10] (v6); %11
+\draw[thick,blue15] (v2) to[out=188, in=32] (v6); %12
+\draw[thick,blue16] (v2) to[out=212, in=8] (v6); %13
+\draw[thick,violet11] (v2) to[out=186, in=34] (v6); %14
+
+%3 to 4:
+\draw[thick,red14] (v3) to[out=260, in=0] (v4); %11
+\draw[thick,red16] (v3) to[out=264, in=356] (v4); %12
+\draw[thick,yellow13] (v3) to[out=268, in=352] (v4); %13
+\draw[thick,green17] (v3) to[out=272, in=348] (v4); %14
+
+%3 to 5:
+\draw[thick,red16] (v3) to[out=190, in=350] (v5); %11
+\draw[thick,orange18] (v3) to[out=168, in=12] (v5); %12
+\draw[thick,yellow15] (v3) to[out=192, in=348] (v5); %13
+\draw[thick,grey16] (v3) to[out=166, in=14] (v5); %14
+
+%3 to 6:
+\draw[thick,green14] (v6) to[out=335, in=165] (v3); %11
+\draw[thick,green18] (v6) to[out=346, in=154] (v3); %12
+\draw[thick,violet12] (v6) to[out=334, in=166] (v3); %13
+\draw[thick,grey17] (v6) to[out=347, in=153] (v3); %14
+
+%4 to 5:
+\draw[thick,blue17] (v5) to[out=330, in=170] (v4); %11
+\draw[thick,violet15] (v5) to[out=352, in=148] (v4); %12
+\draw[thick,violet16] (v5) to[out=328, in=172] (v4); %13
+\draw[thick,grey18] (v5) to[out=354, in=146] (v4); %14
+
+%4 to 6:
+\draw[thick,yellow16] (v6) to[out=326, in=134] (v4); %11
+\draw[thick,green17] (v6) to[out=328, in=132] (v4); %12
+\draw[thick,blue15] (v6) to[out=330, in=130] (v4); %13
+\draw[thick,blue18] (v6) to[out=332, in=128] (v4); %14
+
+%5 to 6:
+\draw[thick,red15] (v6) to[out=240, in=140] (v5); %11
+\draw[thick,orange13] (v6) to[out=236, in=144] (v5); %12
+\draw[thick,violet16] (v6) to[out=232, in=148] (v5); %13
+\draw[thick,grey16] (v6) to[out=228, in=152] (v5); %14
+
+%1 to 7:
+\draw[thick,red13] (v1) to[out=310, in=150] (v7); %11
+\draw[thick,orange12] (v1) to[out=332, in=128] (v7); %12
+\draw[thick,blue12] (v1) to[out=308, in=152] (v7); %13
+\draw[thick,grey12] (v1) to[out=334, in=126] (v7); %14
+
+%1 to 8:
+\draw[thick,red11] (v1) to[out=255, in=85] (v8); %11
+\draw[thick,green13] (v1) to[out=266, in=74] (v8); %12
+\draw[thick,violet13] (v1) to[out=254, in=86] (v8); %13
+\draw[thick,grey13] (v1) to[out=267, in=73] (v8); %14
+
+%2 to 7:
+\draw[thick,orange16] (v2) to[out=340, in=80] (v7); %11
+\draw[thick,green16] (v2) to[out=344, in=76] (v7); %12
+\draw[thick,blue16] (v2) to[out=348, in=72] (v7); %13
+\draw[thick,violet14] (v2) to[out=352, in=68] (v7); %14
+
+%2 to 8:
+\draw[thick,red11] (v2) to[out=235, in=65] (v8); %11
+\draw[thick,orange15] (v2) to[out=246, in=54] (v8); %12
+\draw[thick,orange16] (v2) to[out=234, in=66] (v8); %13
+\draw[thick,blue14] (v2) to[out=247, in=53] (v8); %14
+
+%3 to 7:
+\draw[thick,red17] (v7) to[out=300, in=40] (v3); %11
+\draw[thick,orange17] (v7) to[out=304, in=36] (v3); %12
+\draw[thick,yellow15] (v7) to[out=308, in=32] (v3); %13
+\draw[thick,violet14] (v7) to[out=312, in=28] (v3); %14
+
+%3 to 8:
+\draw[thick,orange18] (v3) to[out=210, in=10] (v8); %11
+\draw[thick,blue14] (v3) to[out=188, in=32] (v8); %12
+\draw[thick,violet13] (v3) to[out=212, in=8] (v8); %13
+\draw[thick,grey15] (v3) to[out=186, in=34] (v8); %14
+
+%4 to 7:
+\draw[thick,orange17] (v7) to[out=230, in=70] (v4); %11
+\draw[thick,green15] (v7) to[out=252, in=48] (v4); %12
+\draw[thick,violet17] (v7) to[out=228, in=72] (v4); %13
+\draw[thick,grey18] (v7) to[out=254, in=46] (v4); %14
+
+%4 to 8:
+\draw[thick,red12] (v4) to[out=220, in=320] (v8); %11
+\draw[thick,yellow14] (v4) to[out=224, in=316] (v8); %12
+\draw[thick,violet17] (v4) to[out=228, in=312] (v8); %13
+\draw[thick,grey15] (v4) to[out=232, in=308] (v8); %14
+
+%5 to 7:
+\draw[thick,red18] (v7) to[out=205, in=15] (v5); %11
+\draw[thick,green16] (v7) to[out=194, in=26] (v5); %12
+\draw[thick,blue13] (v7) to[out=206, in=14] (v5); %13
+\draw[thick,violet18] (v7) to[out=193, in=27] (v5); %14
+
+%5 to 8:
+\draw[thick,yellow17] (v5) to[out=280, in=180] (v8); %11
+\draw[thick,green12] (v5) to[out=276, in=184] (v8); %12
+\draw[thick,blue17] (v5) to[out=272, in=188] (v8); %13
+\draw[thick,grey14] (v5) to[out=268, in=192] (v8); %14
+
+%6 to 7:
+\draw[thick,red13] (v7) to[out=185, in=355] (v6); %11
+\draw[thick,red18] (v7) to[out=174, in=6] (v6); %12
+\draw[thick,yellow16] (v7) to[out=186, in=354] (v6); %13
+\draw[thick,grey17] (v7) to[out=173, in=7] (v6); %14
+
+%6 to 8:
+\draw[thick,yellow17] (v6) to[out=310, in=110] (v8); %11
+\draw[thick,yellow18] (v6) to[out=288, in=132] (v8); %12
+\draw[thick,green18] (v6) to[out=312, in=108] (v8); %13
+\draw[thick,blue18] (v6) to[out=286, in=134] (v8); %14
+
+%7 to 8:
+\draw[thick,red17] (v7) to[out=230, in=30] (v8); %11
+\draw[thick,yellow18] (v7) to[out=208, in=52] (v8); %12
+\draw[thick,green13] (v7) to[out=232, in=28] (v8); %13
+\draw[thick,violet18] (v7) to[out=206, in=54] (v8); %14
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%1 to 9:
+\draw[thick,red11] (v1) to[out=200, in=20] (v9); %1
+\draw[thick,red12] (v1) to[out=196, in=24] (v9); %2
+\draw[thick,red13] (v1) to[out=192, in=28] (v9); %3
+\draw[thick,orange13] (v1) to[out=188, in=32] (v9); %4
+\draw[thick,yellow11] (v1) to[out=184, in=36] (v9); %5
+\draw[thick,yellow12] (v1) to[out=180, in=40] (v9); %6
+\draw[thick,yellow13] (v1) to[out=176, in=44] (v9); %7
+\draw[thick,green12] (v1) to[out=172, in=48] (v9); %8
+\draw[thick,green13] (v1) to[out=168, in=52] (v9); %9
+\draw[thick,blue13] (v1) to[out=164, in=56] (v9); %10
+\draw[thick,violet11] (v1) to[out=160, in=60] (v9); %11
+\draw[thick,violet12] (v1) to[out=156, in=64] (v9); %12
+\draw[thick,violet13] (v1) to[out=152, in=68] (v9); %13
+\draw[thick,grey11] (v1) to[out=148, in=72] (v9); %14
+
+%2 to 9:
+\draw[thick,red11] (v2) to[out=180, in=0] (v9); %1
+\draw[thick,red14] (v2) to[out=178, in=2] (v9); %2
+\draw[thick,red15] (v2) to[out=182, in=358] (v9); %3
+\draw[thick,yellow14] (v2) to[out=176, in=4] (v9); %4
+\draw[thick,green14] (v2) to[out=184, in=356] (v9); %5
+\draw[thick,green15] (v2) to[out=174, in=6] (v9); %6
+\draw[thick,green16] (v2) to[out=186, in=354] (v9); %7
+\draw[thick,blue14] (v2) to[out=172, in=8] (v9); %8
+\draw[thick,blue15] (v2) to[out=188, in=352] (v9); %9
+\draw[thick,violet11] (v2) to[out=170, in=10] (v9); %10
+\draw[thick,violet14] (v2) to[out=190, in=350] (v9); %11
+\draw[thick,violet15] (v2) to[out=168, in=12] (v9); %12
+\draw[thick,grey12] (v2) to[out=192, in=348] (v9); %13
+\draw[thick,grey14] (v2) to[out=166, in=14] (v9); %14
+
+%3 to 9:
+\draw[thick,red17] (v9) to[out=320, in=140] (v3); %1
+\draw[thick,orange14] (v9) to[out=319, in=141] (v3); %2
+\draw[thick,orange17] (v9) to[out=321, in=139] (v3); %3
+\draw[thick,yellow11] (v9) to[out=318, in=142] (v3); %4
+\draw[thick,green17] (v9) to[out=322, in=138] (v3); %5
+\draw[thick,green18] (v9) to[out=317, in=143] (v3); %6
+\draw[thick,blue11] (v9) to[out=323, in=137] (v3); %7
+\draw[thick,blue12] (v9) to[out=316, in=144] (v3); %8
+\draw[thick,blue14] (v9) to[out=324, in=136] (v3); %9
+\draw[thick,violet13] (v9) to[out=315, in=145] (v3); %10
+\draw[thick,violet14] (v9) to[out=325, in=135] (v3); %11
+\draw[thick,grey15] (v9) to[out=314, in=146] (v3); %12
+\draw[thick,grey16] (v9) to[out=326, in=134] (v3); %13
+\draw[thick,grey17] (v9) to[out=313, in=147] (v3); %14
+
+%4 to 9:
+\draw[thick,red14] (v9) to[out=300, in=120] (v4); %1
+\draw[thick,red16] (v9) to[out=299, in=121] (v4); %2
+\draw[thick,orange11] (v9) to[out=301, in=119] (v4); %3
+\draw[thick,orange12] (v9) to[out=298, in=122] (v4); %4
+\draw[thick,orange17] (v9) to[out=302, in=118] (v4); %5
+\draw[thick,yellow13] (v9) to[out=297, in=123] (v4); %6
+\draw[thick,yellow16] (v9) to[out=303, in=117] (v4); %7
+\draw[thick,green11] (v9) to[out=296, in=124] (v4); %8
+\draw[thick,blue15] (v9) to[out=304, in=116] (v4); %9
+\draw[thick,blue17] (v9) to[out=295, in=125] (v4); %10
+\draw[thick,blue18] (v9) to[out=305, in=115] (v4); %11
+\draw[thick,violet16] (v9) to[out=294, in=126] (v4); %12
+\draw[thick,grey11] (v9) to[out=306, in=114] (v4); %13
+\draw[thick,grey15] (v9) to[out=293, in=127] (v4); %14
+
+%5 to 9:
+\draw[thick,red16] (v9) to[out=260, in=80] (v5); %1
+\draw[thick,red18] (v9) to[out=258, in=82] (v5); %2
+\draw[thick,orange13] (v9) to[out=262, in=78] (v5); %3
+\draw[thick,orange14] (v9) to[out=256, in=84] (v5); %4
+\draw[thick,orange18] (v9) to[out=264, in=76] (v5); %5
+\draw[thick,yellow12] (v9) to[out=254, in=86] (v5); %6
+\draw[thick,yellow15] (v9) to[out=266, in=74] (v5); %7
+\draw[thick,yellow17] (v9) to[out=252, in=88] (v5); %8
+\draw[thick,green11] (v9) to[out=268, in=72] (v5); %9
+\draw[thick,green16] (v9) to[out=250, in=90] (v5); %10
+\draw[thick,blue11] (v9) to[out=270, in=70] (v5); %11
+\draw[thick,violet15] (v9) to[out=248, in=92] (v5); %12
+\draw[thick,violet18] (v9) to[out=272, in=68] (v5); %13
+\draw[thick,grey18] (v9) to[out=246, in=94] (v5); %14
+
+%6 to 9:
+\draw[thick,red13] (v9) to[out=240, in=60] (v6); %1
+\draw[thick,red15] (v9) to[out=236, in=64] (v6); %2
+\draw[thick,red18] (v9) to[out=232, in=68] (v6); %3
+\draw[thick,orange11] (v9) to[out=228, in=72] (v6); %4
+\draw[thick,orange15] (v9) to[out=224, in=76] (v6); %5
+\draw[thick,yellow17] (v9) to[out=220, in=80] (v6); %6
+\draw[thick,yellow18] (v9) to[out=216, in=84] (v6); %7
+\draw[thick,green14] (v9) to[out=212, in=88] (v6); %8
+\draw[thick,green17] (v9) to[out=208, in=92] (v6); %9
+\draw[thick,blue16] (v9) to[out=204, in=96] (v6); %10
+\draw[thick,violet12] (v9) to[out=200, in=100] (v6); %11
+\draw[thick,violet16] (v9) to[out=196, in=104] (v6); %12
+\draw[thick,grey13] (v9) to[out=192, in=108] (v6); %13
+\draw[thick,grey16] (v9) to[out=188, in=112] (v6); %14
+
+%7 to 9:
+\draw[thick,orange12] (v9) to[out=340, in=160] (v7); %1
+\draw[thick,orange16] (v9) to[out=342, in=158] (v7); %2
+\draw[thick,yellow15] (v9) to[out=338, in=162] (v7); %3
+\draw[thick,yellow16] (v9) to[out=344, in=156] (v7); %4
+\draw[thick,yellow18] (v9) to[out=336, in=164] (v7); %5
+\draw[thick,green13] (v9) to[out=346, in=154] (v7); %6
+\draw[thick,green15] (v9) to[out=334, in=166] (v7); %7
+\draw[thick,blue12] (v9) to[out=348, in=152] (v7); %8
+\draw[thick,blue13] (v9) to[out=332, in=168] (v7); %9
+\draw[thick,blue16] (v9) to[out=350, in=150] (v7); %10
+\draw[thick,violet17] (v9) to[out=330, in=170] (v7); %11
+\draw[thick,grey12] (v9) to[out=352, in=148] (v7); %12
+\draw[thick,grey17] (v9) to[out=328, in=172] (v7); %13
+\draw[thick,grey18] (v9) to[out=354, in=146] (v7); %14
+
+%8 to 9:
+\draw[thick,red12] (v9) to[out=280, in=100] (v8); %1
+\draw[thick,red17] (v9) to[out=278, in=102] (v8); %2
+\draw[thick,orange15] (v9) to[out=282, in=98] (v8); %3
+\draw[thick,orange16] (v9) to[out=276, in=104] (v8); %4
+\draw[thick,orange18] (v9) to[out=284, in=96] (v8); %5
+\draw[thick,yellow14] (v9) to[out=274, in=106] (v8); %6
+\draw[thick,green12] (v9) to[out=286, in=94] (v8); %7
+\draw[thick,green18] (v9) to[out=272, in=108] (v8); %8
+\draw[thick,blue17] (v9) to[out=288, in=92] (v8); %9
+\draw[thick,blue18] (v9) to[out=270, in=110] (v8); %10
+\draw[thick,violet17] (v9) to[out=290, in=90] (v8); %11
+\draw[thick,violet18] (v9) to[out=268, in=112] (v8); %12
+\draw[thick,grey13] (v9) to[out=292, in=88] (v8); %13
+\draw[thick,grey14] (v9) to[out=266, in=114] (v8); %14
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\coordinate (v1) at (90 - 1*360/\n + 360/\n:\rad);
+\draw[fill=black] (90 - 1*360/\n + 360/\n:\rad) circle (4pt);
+\node at (0,8.5) {$1$};
+
+\coordinate (v2) at (90 - 2*360/\n + 360/\n:\rad);
+\draw[fill=black] (90 - 2*360/\n + 360/\n:\rad) circle (4pt);
+\node at (5.4,6.5) {$2$};
+
+\coordinate (v7) at (90 - 3*360/\n + 360/\n:\rad); 
+\draw[fill=black] (90 - 3*360/\n + 360/\n:\rad) circle (4pt);
+\node at (8.3,1.4) {$7$};
+
+\coordinate (v3) at (90 - 4*360/\n + 360/\n:\rad);
+\draw[fill=black] (90 - 4*360/\n + 360/\n:\rad) circle (4pt); %v3
+\node at (7.5,-4) {$3$};
+
+\coordinate (v4) at (90 - 5*360/\n + 360/\n:\rad); %v4
+\draw[fill=black] (90 - 5*360/\n + 360/\n:\rad) circle (4pt);
+\node at (2.7,-8) {$4$};
+
+\coordinate (v8) at (90 - 6*360/\n + 360/\n:\rad); %v8
+\draw[fill=black] (90 - 6*360/\n + 360/\n:\rad) circle (4pt);
+\node at (-2.9,-7.9) {$8$};
+
+\coordinate (v5) at (90 - 7*360/\n + 360/\n:\rad);
+\draw[fill=black] (90 - 7*360/\n + 360/\n:\rad) circle (4pt); %v5
+\node at (-7.3,-4.2) {$5$};
+
+\coordinate (v6) at (90 - 8*360/\n + 360/\n:\rad); %v6
+\draw[fill=black] (90 - 8*360/\n + 360/\n:\rad) circle (4pt);
+\node at (-8.2,1.5) {$6$};
+
+\coordinate (v9) at (90 - 9*360/\n + 360/\n:\rad); %v9
+\draw[fill=black] (90 - 9*360/\n + 360/\n:\rad) circle (4pt);
+\node at (-5.4,6.4) {$9$};
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{tikzpicture}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
