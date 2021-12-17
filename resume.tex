@@ -1,0 +1,307 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{xcolor}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% REQUIRED PACKAGES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
+\RequirePackage{tikz}
+\usetikzlibrary{arrows}
+\RequirePackage[skins]{tcolorbox}       % somehow required for tikz to work at all
+\RequirePackage{graphicx}
+\RequirePackage{xcolor}
+\RequirePackage{fontawesome}
+\RequirePackage{academicons}
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+%\definecolor{schrift}{RGB}{0,73,114}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.8in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-8pt}\scshape\raggedright\Large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-1pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    {\large \scshape Celdrick Ndze Kuta} \\ \vspace{1pt}
+    1579 Kamp Springs Ave, Lawrenceville GA \\ \vspace{1pt}
+    \small \raisebox{-0.1\height}\faPhone\ 309-989-0419 ~ \href{mailto:kutaceldrick880@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{Email}} ~ 
+    \href{https://www.linkedin.com/in/kuta-n-celdrick-b808ba169/}{\raisebox{-0.2\height}\faLinkedin\ \underline{LinkedIn Link}}  ~
+    \href{https://github.com/kuta-ndze/kuta-ndze}{\raisebox{-0.2\height}\faGithub\ \underline{GitHub Link}}  ~
+    \href{https://twitter.com/kutandze}{\raisebox{-0.2\height}\faTwitter\ \underline{Twitter Link}}
+    \vspace{-8pt}
+\end{center}
+
+%-----------OBJECTIVE-----------
+%\section{Objective}
+Data enthusiast with good collaborative and communication skills seeking a position in a distinguish organization.\\
+%\textcolor{red}{Willing to relocated but prefer to work remotely.Authorized to work in the US for any employer and will volunteer for free.}
+\vspace{-0.3cm}
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Illinois State University}{May 2021}
+      {MSc. in Applied Statistics}{Normal, Illinois}
+  \vspace{-4pt}
+    \resumeSubheading
+      {University of Yaound\'e}{June 2016}
+      {MSc. in Computer Science}{Yaound\'e, Cameroon}
+    \begin{itemize}[leftmargin=*]
+        \item Relevant Coursework:  SQL Database, System Programming, Computer Architecture, Linear Models, AWS SSA, Big Data, Data Structures, Design of Experiment.
+    \end{itemize}
+
+   % \resumeSubheading
+    %  {University of Buea}{Fall 2010}
+     % {BSc. Major in Mathematics/Minor in Computer Science}{Buea, Cameroon}
+  \resumeSubHeadingListEnd
+ \vspace{-19pt}
+%-----------PROGRAMMING SKILLS-----------
+\section{Skills}
+\textit{Machine and Deep Learning:} Classification ,    Regression , Clustering  , ANN .\\
+\textit{Data Analytics:} Data Cleaning , Manipulation , Data Scraping , Data Visualization , Design of Experiments.\\
+\textit{Proficient:} Python, R Studio , SQL Databases , Amazon Web Service (AWS) , Power BI , Microsoft , \LaTeX , HTML , CSS.
+\\ \textit{Others:} Collaboration, Flexibility, Problem-Solving, Communication, Hadoop-MapReduce  , Git/GitHub, Visual Basics Code.
+\vspace{-0.3cm}
+%\vspace{0.2cm}
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\href{}{IBM Gts Remote Office}}{Jan 2021 -- Present}
+      {Data Analyst}{Houston, TX}
+      \resumeItemListStart[leftmargin=*]
+       \resumeItem{Developed individual reports and designed the final dashboards to visualize infrastructure related incidents and jobs to meet their requirements.}
+        \resumeItem{Build a relational data model , to compare regional performance , analyze product level trends and forecasts.}
+      % \resumeItem{Developed and created custom Service Control Policies and attached them to approved OUs and AWS accounts as required}       
+      \resumeItemListEnd 
+       \vspace{-7pt}
+      \resumeSubheading
+      {\href{}{AIG}}{Feb 2018 -- Dec 2020}
+      {SQL Server DBA}{Houston, Texas}
+      \resumeItemListStart[leftmargin=*]
+       \resumeItem{Monitored and administered SQL Instances on standalone servers and Cluster environment.}
+        \resumeItem{Setup and managed a MySQL server database to store match statistics for extensive querying involving multiple joins between tables and schemas.}
+       \resumeItem{Strong experience in Database Optimization and Tuning, Backup/Restore, Troubleshooting, and Data Import/Export. }
+        \resumeItem{Updated database systems by reviewing, planning, testing and installing database security patches and service packs.}
+        \resumeItem{Analyzed and defined capacity planning for maintenance of the different Database Backups and Restore scenarios .}
+       % \resumeItem{Collaborated with a team of 6 DBA's in designing and implementing the new SQL Server 2017 concepts like Always ON Availability Groups for HADR and we use the secondary replica to offload some critical application read only/reporting workload hence improving Performance on the Primary replica (Production) databases .}
+      \resumeItemListEnd
+       \vspace{-7pt}
+      \resumeSubheading
+      {\href{}{AFRICSIS}}{May 2014 -- Oct 2017}
+      {Linux System Administrator}{Yaound\'e, Cameroon}
+      \resumeItemListStart[leftmargin=*]
+       \resumeItem{Created an automated process using bash shell scripts to perform user/group administration, file/directory security, authentication and access management to make sure users and groups have the right permission.}
+        \resumeItem{ Performed system hardening with the use of shell scripts to upgrade the kernel version of most Dev servers, to ensure that the kernel version was up to date and bug free.}
+       \resumeItem{Orchestrated system monitoring through the use of CLI commands such as “top,ps” to help manage processes and application usage which in return helped us anticipate a decrease in system crash by 5\%. }
+       \resumeItem{Scheduled daily and weekly backups to improve systems recovery after a crash to ensure that there is never a massive loss of vital information in the process.}
+       %\resumeItem{Design and developed hyper-graphs with \LaTeX,  a $3$-factorization of $K^3_5$ embedded into a .}       
+      \resumeItemListEnd    
+   \resumeSubHeadingListEnd
+\vspace{-19pt}
+%-----------PROJECTS-----------
+\section{Academic Projects}
+    \vspace{-5pt}
+    \resumeSubHeadingListStart
+    %\vspace{-2pt}
+     % \resumeProjectHeading
+      %    {\textbf{\href{}{Business Intelligent Solution}} $|$ \emph{Power BI}}{May 2021}
+       %   \resumeItemListStart[leftmargin=*]
+        %    \resumeItem{Connect and transform the raw data, to track KPI's (Sales, revenue, profit and returns).}
+         %   \resumeItem{Build a relational data model, to compare regional performance, analyze product level trends and forecasts.}
+          %  \resumeItem{Created new calculated columns and DAX measures to identify high-value customers.}
+           % \resumeItem{Design an interactive report to analyze and visualize the data.}
+         % \resumeItemListEnd 
+          %\vspace{-20pt}
+     %\resumeProjectHeading
+      %    {\textbf{\href{}{Soil Water Field Capacity by optimizing soil depth}} $|$ \emph{SAS}}{Fall 2020}
+       %   \resumeItemListStart
+        %    \resumeItem{Developed a  Randomized Complete Block Design (RCBD) using SAS programming language. ANOVA was carried out on the significance of difference in treatment means and concluded that at 5\% significant level; There is no significant difference in the effect of irrigation on Soil Field Water Capacity with respect to root water uptake by maize.  In other words different irrigation proportions do not give different soil water field capacity..}
+         % \resumeItemListEnd
+          %\vspace{-17pt}
+      \resumeProjectHeading
+          {\textbf{\href{https://math.illinoisstate.edu/actuary/casestudieslibrary.shtml}{Covid-19 Mortality and Confirmed Cases}} $|$ \emph{R-Studio, Tableau}}{May 2021}
+          \resumeItemListStart[leftmargin=*]
+            \resumeItem{Developed a Multinomial Logistics Regression model using R-studio and Tableau to identify determinants for the number of confirmed Covid-19 cases.} 
+            
+            \textbf{Key Skills:} Multi Linear Regression. 
+          \resumeItemListEnd
+          \vspace{-20pt}
+      \resumeProjectHeading
+          {\textbf{Travel Package Prediction} $|$ \emph{Python, Excel}}{May 2020}
+          \resumeItemListStart[leftmargin=*]
+            \resumeItem{Predict which customer is more likely to purchase the newly introduce travel package from a travel company using ML algorithms ensemble techniques with  sufficiently large observations elaborating on most significant variables.} 
+            
+            \textbf{Key Skills:} Logistic Regression, Bagging, Boosting, Decision Tree, Random Forest, K-means. 
+          \resumeItemListEnd
+          \vspace{-20pt}
+          \resumeProjectHeading
+          {\textbf{Graduate Admission Prediction} $|$ \emph{Python}}{March 2019}
+          \resumeItemListStart[leftmargin=*]
+            \resumeItem{Used ML Techniques in Python to predict graduate student admission rate into graduate school from a reputed top university dataset using little of data cleaning, treating missing values followed by training the model on sufficiently large amount of observations.} 
+            
+            \textbf{Key Skills:} Logistic Regression, Lasso, SVR, Decision Tree, Random Forest, ANN. 
+          \resumeItemListEnd 
+    \resumeSubHeadingListEnd
+\vspace{-19pt}
+%-----------CERTIFICATIONS-----------
+\section {Certifications}
+    %\resumeSubHeadingListStart
+    \vspace{-2pt}
+        \begin{multicols}{3}
+            \begin{itemize}[leftmargin=*,itemsep=-5pt, parsep=3pt]
+                \item \href{https://www.credly.com/users/celdrick-ndze-kuta}{IBM Data Science Professional}
+                \item \href{}{Power BI}
+                \item \href{}{AWS SAA}
+                \item\small Society of Actuary Exam P/1. passed
+                \item IFOA course CT 1 and CT2.2018.
+            \end{itemize}
+        \end{multicols}
+        \vspace*{2.0\multicolsep}
+
+    %\resumeSubHeadingListEnd
+
+
+%------RELEVANT COURSEWORK-------
+%\section{Relevant Coursework}
+ %   %\resumeSubHeadingListStart
+  %      \begin{multicols}{4}
+   %         \begin{itemize}[itemsep=-5pt, parsep=3pt]
+    %            \item\small Big Data 
+     %%          %\item Data  Mining
+       %         \item Design of Experiments
+        %        \item Database Management
+         %       %\item Random Process Automation
+          %      \item AWS SSA
+           %     \item Systems Programming
+            %    \item Computer Architecture
+             %   \item Data Structures
+              %  \item Linear Models
+        %    \end{itemize}
+        %\end{multicols}
+       %\vspace*{2.0\multicolsep}
+%    \resumeSubHeadingListEnd
+\vspace{-1pt}   
+%-----------INVOLVEMENT---------------
+\section{Leadership / Extracurricular}
+     \begin{itemize}[leftmargin=*]
+         \item Achieved a 4 star fraternity ranking by the Office of Fraternity and Sorority Affairs-University of Yaound\'e (highest possible ranking)\vspace{-7pt}
+         \item Managed executive board of 5 members and ran weekly meetings to oversee progress in essential parts of the chapter\vspace{-7pt}
+         \item Volunteering at MidWest Food Bank Bloomington-Normal, IL. Loading food transport vans and Trucks
+     \end{itemize}
+\end{document}
