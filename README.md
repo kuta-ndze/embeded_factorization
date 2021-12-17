@@ -3,7 +3,7 @@ A $3$-factorization of $K^3_5$ embedded into a $5-$factorization of $K^3_6$ embe
 
 >### Graphical Output click below
 ![emb_fact](https://github.com/kuta-ndze/embeded_factorization/blob/main/embeded%20factorization.jpg)
-Full code to the design here ![code](https://github.com/kuta-ndze/embeded_factorization/blob/main/main.tex)
+Full code to the design here [code](https://github.com/kuta-ndze/embeded_factorization/blob/main/main.tex)
 
 >### My resume code with latex
-![resume](https://github.com/kuta-ndze/embeded_factorization/blob/main/resume.tex)
+[resume](https://github.com/kuta-ndze/embeded_factorization/blob/main/resume.tex)
